@@ -33,7 +33,11 @@ const FileUpload = ({ parentDirId, onUploadSuccess }) => {
       toast.warning("Please select a file");
       return;
     }
-
+    if (file.size > 4 * 1024 * 1024) {
+        toast.error("File size should be less than 4MB");
+        return;
+      }
+    
     setUploadStatus("uploading");
     const config = {
       headers: {
