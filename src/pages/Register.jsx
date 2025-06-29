@@ -113,7 +113,9 @@ const Register = () => {
               <User size={28} />
             </div>
             <h2 className="text-2xl font-bold">Welcome </h2>
-            <p className="opacity-70 text-sm">Create an account to store your files!</p>
+            <p className="opacity-70 text-sm">
+              Create an account to store your files!
+            </p>
           </div>
 
           {/* Name */}
@@ -210,7 +212,13 @@ const Register = () => {
               </button>
             </div>
           )}
-
+          <p className="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            ⏳ OTP delivery may take up to a minute or more,because 
+            server is not fully established .
+            <br />
+            👉 For faster access, consider using{" "}
+            <span className="text-blue-600 font-medium">Google Login</span>.
+          </p>
           {/* Password */}
           <div className="relative">
             <label className="flex items-center text-sm font-medium mb-1">
