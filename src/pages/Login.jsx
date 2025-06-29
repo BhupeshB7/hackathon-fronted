@@ -8,7 +8,7 @@ import { toast } from "sonner";
 
 const Login = () => {
   const [email, setEmail] = useState("b29.bhupesh@gmail.com");
-  const [password, setPassword] = useState("12345678");
+  const [password, setPassword] = useState("491676");
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -33,14 +33,7 @@ const Login = () => {
             </div>
             <h2 className="text-2xl font-bold">Welcome Back</h2>
             <p className="opacity-70 text-sm">Sign in to your Drive account</p>
-          </div>
-          <div className="mb-4 text-sm text-yellow-600 bg-yellow-50 border border-yellow-200 rounded p-3 dark:bg-yellow-900 dark:text-yellow-100 dark:border-yellow-800">
-            ⚠️ <strong>Note:</strong> This email/password is provided only for
-            testing the App feature.
-            <br />
-            We highly recommend creating your own account for a better and
-            personalized experience.
-          </div>
+          </div> 
           <div>
             <label
               className="flex items-center text-sm font-medium mb-1"
