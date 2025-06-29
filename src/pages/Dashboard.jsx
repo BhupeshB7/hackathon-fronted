@@ -279,13 +279,7 @@ const Dashboard = () => {
                         <Share2 className="w-4 h-4 mr-2" />
                         Share
                       </DropdownMenuSubTrigger>
-                      <DropdownMenuSubContent className="w-48">
-                        <DropdownMenuItem
-                          onClick={() => setIsShareModalOpen(true)}
-                        >
-                          <Share2 className="w-4 h-4 mr-2" />
-                          Share
-                        </DropdownMenuItem>
+                      <DropdownMenuSubContent className="w-48"> 
                         <DropdownMenuItem
                           onClick={() => handleCopyLink(fileItem._id)}
                         >
