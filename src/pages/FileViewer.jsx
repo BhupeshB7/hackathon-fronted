@@ -48,8 +48,8 @@ const FileViewer = ({ mode }) => {
     try {
       const url =
         mode === "private"
-          ? `http://localhost:3000/api/files/${fileId}/metadata`
-          : `http://localhost:3000/api/files/public/${fileId}/metadata`;
+          ? `https://hackathon-backend-chi-two.vercel.app/api/files/${fileId}/metadata`
+          : `https://hackathon-backend-chi-two.vercel.app/api/files/public/${fileId}/metadata`;
       const res = await axios.get(url, { withCredentials: true });
       console.log(res.data)
       setFile(res.data);
@@ -198,7 +198,7 @@ const FileViewer = ({ mode }) => {
               <div className="flex items-center space-x-3">
                 <button
                   onClick={() =>
-                    (window.location.href = `http://localhost:3000/api/files/${file.id}?action=download`)
+                    (window.location.href = `https://hackathon-backend-chi-two.vercel.app/api/files/${file.id}?action=download`)
                   }
                   className="flex items-center justify-center p-2 text-white bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-3"
                 >

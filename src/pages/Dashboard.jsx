@@ -296,7 +296,7 @@ const Dashboard = () => {
                     </DropdownMenuSub>
                     <DropdownMenuItem
                       onClick={() =>
-                        (window.location.href = `http://localhost:3000/api/files/${fileItem.id}?action=download`)
+                        (window.location.href = `https://hackathon-backend-chi-two.vercel.app/api/files/${fileItem.id}?action=download`)
                       }
                     >
                       <Download className="w-4 h-4 mr-2" />

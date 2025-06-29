@@ -1,5 +1,5 @@
 import axios from "axios"; 
-const API_URL = "http://localhost:3000/api";
+const API_URL = "https://hackathon-backend-chi-two.vercel.app/api";
 // const API_URL = "https://hackathon-backend-cvbj.vercel.app/api";
 
 const api = axios.create({

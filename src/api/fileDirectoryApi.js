@@ -5,7 +5,7 @@ import { toast } from "sonner";
 export const fetchDirectory = async (parentId) => {
   try {
     const res = await axios.get(
-      `http://localhost:3000/api/directory/${parentId || ""}`,
+      `https://hackathon-backend-chi-two.vercel.app/api/directory/${parentId || ""}`,
       { withCredentials: true }
     );
 
@@ -25,7 +25,7 @@ export const handleCreateDirectory = async (parentId, dirname, refetch) => {
 
   try {
     const res = await axios.post(
-      `http://localhost:3000/api/directory/create/${parentId || ""}`,
+      `https://hackathon-backend-chi-two.vercel.app/api/directory/create/${parentId || ""}`,
       null,
       {
         headers: { dirname },
@@ -51,8 +51,8 @@ export const handleRenameDirOrFile = async (type, id, value, refetch) => {
   try {
     const url =
       type === "file"
-        ? `http://localhost:3000/api/files/rename/${id}`
-        : `http://localhost:3000/api/directory/rename/${id}`;
+        ? `https://hackathon-backend-chi-two.vercel.app/api/files/rename/${id}`
+        : `https://hackathon-backend-chi-two.vercel.app/api/directory/rename/${id}`;
     const data =
       type === "file" ? { newFileName: value } : { newDirName: value };
     const res = await axios.patch(url, data, {
@@ -75,7 +75,7 @@ export const handleDeleteDir = async (id, refetch) => {
   if (!result) return;
   try {
     const res = await axios.delete(
-      `http://localhost:3000/api/directory/${id}`,
+      `https://hackathon-backend-chi-two.vercel.app/api/directory/${id}`,
       {
         withCredentials: true,
       }
@@ -95,7 +95,7 @@ export const deleteFile = async (fileId, refetch) => {
   if (!result) return;
   try {
     const res = await axios.delete(
-      `http://localhost:3000/api/files/${fileId}`,
+      `https://hackathon-backend-chi-two.vercel.app/api/files/${fileId}`,
       {
         withCredentials: true,
       }
@@ -115,7 +115,7 @@ export const deleteFile = async (fileId, refetch) => {
 export const allTrashFiles = async (page = 1, limit = 5, sortBy = "recent") => {
   try {
     const res = await axios.get(
-      `http://localhost:3000/api/trash?page=${page}&limit=${limit}&sortBy=${sortBy}`,
+      `https://hackathon-backend-chi-two.vercel.app/api/trash?page=${page}&limit=${limit}&sortBy=${sortBy}`,
       { withCredentials: true }
     );
     return res.data;
@@ -128,7 +128,7 @@ export const allTrashFiles = async (page = 1, limit = 5, sortBy = "recent") => {
 export const deleteTrashFile = async (fileId) => {
   try {
     const res = await axios.delete(
-      `http://localhost:3000/api/trash/delete/${fileId}`,
+      `https://hackathon-backend-chi-two.vercel.app/api/trash/delete/${fileId}`,
       { withCredentials: true }
     );
    
@@ -142,7 +142,7 @@ export const deleteTrashFile = async (fileId) => {
 };
 export const getFileAnalytics = async () => {
   try {
-    const res = await axios.get("http://localhost:3000/api/files/analytics", {
+    const res = await axios.get("https://hackathon-backend-chi-two.vercel.app/api/files/analytics", {
       withCredentials: true,
     });
     return res.data;
@@ -155,7 +155,7 @@ export const getFileAnalytics = async () => {
 export const handleStarred = async (fileId, refetch) => {
   try {
     const res = await axios.patch(
-      `http://localhost:3000/api/files/starred/${fileId}`,
+      `https://hackathon-backend-chi-two.vercel.app/api/files/starred/${fileId}`,
       null,
       {
         withCredentials: true,
@@ -184,7 +184,7 @@ function copyToClipboard(text) {
 export const handleCopyLink = async (fileId) => {
   try {
     const res = await axios.post(
-      `http://localhost:3000/api/files/copy-link/${fileId}`,
+      `https://hackathon-backend-chi-two.vercel.app/api/files/copy-link/${fileId}`,
       null,
       { withCredentials: true }
     );

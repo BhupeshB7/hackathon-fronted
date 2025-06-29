@@ -20,8 +20,8 @@ const DetailsModal = ({ isOpen, onClose, type, id }) => {
       try {
         const url =
           type === "file"
-            ? `http://localhost:3000/api/files/fileDetails/${id}`
-            : `http://localhost:3000/api/directory/details/${id}`;
+            ? `https://hackathon-backend-chi-two.vercel.app/api/files/fileDetails/${id}`
+            : `https://hackathon-backend-chi-two.vercel.app/api/directory/details/${id}`;
         const res = await axios.get(url, { withCredentials: true });
         setDetails(res.data[type + "Details"]);
       } catch (err) {

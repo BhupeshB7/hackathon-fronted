@@ -23,7 +23,7 @@ const RecentFiles = () => {
   const fetchRecentFiles = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`http://localhost:3000/api/files/recent`, {
+      const res = await axios.get(`https://hackathon-backend-chi-two.vercel.app/api/files/recent`, {
         withCredentials: true,
       });
       setAllFiles(res.data.data || []);
@@ -111,7 +111,7 @@ const RecentFiles = () => {
                     </DropdownMenuItem>
                     <DropdownMenuItem
                       onClick={() =>
-                        (window.location.href = `http://localhost:3000/api/files/${fileItem._id}?action=download`)
+                        (window.location.href = `https://hackathon-backend-chi-two.vercel.app/api/files/${fileItem._id}?action=download`)
                       }
                     >
                       Download

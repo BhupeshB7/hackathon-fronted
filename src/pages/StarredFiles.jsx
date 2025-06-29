@@ -24,7 +24,7 @@ const StarredFiles = () => {
   const refreshStarredFiles = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`http://localhost:3000/api/files/starred`, {
+      const res = await axios.get(`https://hackathon-backend-chi-two.vercel.app/api/files/starred`, {
         withCredentials: true,
       });
       setStarredFiles(res.data.data || []);

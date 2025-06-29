@@ -17,7 +17,7 @@ const FuzzySearchBar = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/search", {
+      const response = await axios.get("https://hackathon-backend-chi-two.vercel.app/api/search", {
         withCredentials: true,
       });
       setAllData(response.data.combines);

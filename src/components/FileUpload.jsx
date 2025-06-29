@@ -51,7 +51,7 @@ const FileUpload = ({ parentDirId, onUploadSuccess }) => {
 
     try {
       await axios.post(
-        `http://localhost:3000/api/files/upload/${parentDirId || ""}`,
+        `https://hackathon-backend-chi-two.vercel.app/api/files/upload/${parentDirId || ""}`,
         file,
         config
       );
